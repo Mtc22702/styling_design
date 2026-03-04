@@ -1,0 +1,13 @@
+.container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid red;
+  color: red;
+  transition: width 3s, height 4s, color 10s;
+}
+.container:hover {
+  width: 100%;
+  height: auto;
+  color: blue;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplu imagini responsive</title>
+    <style>
+        /* Stil general pentru imagini */
+        img,
+        picture img {
+            max-width: 100%;
+            /* imaginea nu depășește containerul */
+            height: auto;
+            /* păstrează proporțiile */
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Container pentru vizualizare mai clară */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exemple de imagini responsive</h1>
+
+    <div class="container">
+
+        <!-- 1️⃣ Img cu srcset + sizes -->
+        <h2>1. &lt;img&gt; cu srcset + sizes</h2>
+        <img src="./img/ap3.jpg" alt="demo" srcset="./img/ap3_480.jpg 480w, ./img/ap3_800.jpg 800w"
+            sizes="(max-width: 799px) 100vw, (min-width: 800px) 50vw">
+
+        <!-- 2️⃣ Img cu densitate ecran -->
+        <h2>2. &lt;img&gt; cu densitate ecran (1x, 2x, 3x)</h2>
+        <img src="./img/ap3.jpg" alt="demo" srcset="./img/ap3_480.jpg 1x, ./img/ap3_800.jpg 2x, ./img/ap3_1200.jpg 3x">
+
+        <!-- 3️⃣ Picture pentru media query -->
+        <h2>3. &lt;picture&gt; cu media query</h2>
+        <picture>
+            <source media="(max-width: 799px)" srcset="./img/ap3_480.jpg">
+            <source media="(min-width: 800px)" srcset="./img/ap3_800.jpg">
+            <img src="./img/ap3.jpg" alt="demo">
+        </picture>
+
+    </div>
+
+</body>
+
+</html>

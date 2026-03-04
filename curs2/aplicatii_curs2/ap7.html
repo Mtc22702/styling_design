@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Produse Bootstrap 5</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #212529;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* 
+        Bootstrap suportă DOAR:
+
+order-0
+order-1
+order-2
+order-3
+order-4
+order-5
+order-first
+order-last
+        Putem personaliza noi ordinea cu clase  */
+        /* 
+        @media (min-width: 992px) {
+            .order-lg-6 {
+                order: 6;
+            }
+
+            .order-lg-7 {
+                order: 7;
+            }
+
+            .order-lg-8 {
+                order: 8;
+            }
+
+            .order-lg-9 {
+                order: 9;
+            }
+
+            .order-lg-10 {
+                order: 10;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-dark text-white p-4 mb-4">
+        <div class="container myclass">
+            <h1 class="mb-0">Magazin Online</h1>
+            <p class="mb-0">Exemplu Bootstrap 5 Responsive Grid</p>
+        </div>
+    </header>
+
+    <!-- CONȚINUT -->
+    <main class="container">
+        <div class="row g-4">
+
+            <!-- PRODUS 1 (apare primul pe desktop, ultimul pe mobil) -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-4  order-md-4 order-lg-1">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 1</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+            <!-- PRODUS 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-3 order-md-3 order-lg-2">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 2</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+            <!-- PRODUS 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-2 order-md-2 order-lg-3">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 3</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+            <!-- PRODUS 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-1 order-md-1 order-lg-4">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 4</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-5 order-md-5 order-lg-5">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 5</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 6 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 6</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 7 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last ">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 7</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+            <!-- PRODUS 8 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 8</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 9 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 9</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+            <!-- PRODUS  10 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 10</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 11 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 11</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 12 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 12</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 13 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 13</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 14 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 14</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 15 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last ">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 15</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+            <!-- PRODUS 16 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                    <h5>Produs 16</h5>
+                    <p>Descriere produs</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Magazin Online. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

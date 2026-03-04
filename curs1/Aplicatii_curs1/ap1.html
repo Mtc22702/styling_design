@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Units</title>
+
+    <style>
+        /* BAZĂ */
+        html {
+            font-size: 16px;
+            /* referință pentru rem */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+            line-height: 1.5;
+        }
+
+        /* PX – unitate absolută */
+        .text-px {
+            font-size: 20px;
+            background: #f2f2f2;
+        }
+
+        /* EM – relativ la font-size-ul părintelui */
+        .text-em {
+            font-size: 1.5em;
+            background: #e3f2fd;
+        }
+
+        /* REM – relativ la html */
+        .text-rem {
+            font-size: 1.5rem;
+            background: #e8f5e9;
+        }
+
+        /* % – procent din font-size-ul părintelui */
+        .text-percent {
+            font-size: 150%;
+            background: #fff3e0;
+        }
+
+        /* VW – relativ la lățimea ecranului */
+        .text-vw {
+            font-size: 3vw;
+            background: #f3e5f5;
+        }
+
+        /* VH – mai rar pentru text, dar posibil */
+        .text-vh {
+            font-size: 3vh;
+            background: #e0f7fa;
+        }
+
+        /* CH – lățimea caracterului "0" */
+        .text-ch {
+            font-size: 2ch;
+            background: #ffebee;
+        }
+
+        /* EX – înălțimea literei "x" */
+        .text-ex {
+            font-size: 3ex;
+        }
+
+        /* CLAMP – recomandat modern */
+        .text-clamp {
+            font-size: clamp(16px, 2.5vw, 32px);
+        }
+
+        @media screen and (max-width: 798px) {
+            html {
+                font-size: 24px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unități de măsură pentru TEXT în CSS</h1>
+
+    <p class="text-px">
+        Acesta este text cu <strong>px</strong> (20px – fix, nu responsive).
+    </p>
+
+
+    <div style="font-size: 20px; border: 1px solid #000; padding: 10px; margin-bottom: 20px;">
+        <p class="text-em">
+            Acesta este text cu <strong>em</strong> (1.5em – relativ la părinte).
+        </p>
+        <p class="text-rem">
+            Acesta este text cu <strong>rem</strong> (1.5rem – relativ la html).
+        </p>
+    </div>
+    <p class="text-percent">
+        Acesta este text cu <strong>%</strong> (150% din părinte).
+    </p>
+
+    <p class="text-vw">
+        Acesta este text cu <strong>vw</strong> (3vw – crește/scade cu ecranul).
+    </p>
+
+    <p class="text-vh">
+        Acesta este text cu <strong>vh</strong> (3vh – mai rar folosit).
+    </p>
+
+    <p class="text-ch">
+        Acesta este text cu <strong>ch</strong> (2ch – lățimea caracterului 0).
+    </p>
+
+    <p class="text-ex">
+        Acesta este text cu <strong>ex</strong> (3ex – înălțimea literei x).
+    </p>
+
+    <p class="text-clamp">
+        Acesta este text cu <strong>clamp()</strong> – varianta MODERNĂ și recomandată.
+    </p>
+
+</body>
+
+</html>

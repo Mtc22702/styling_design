@@ -1,0 +1,20 @@
+:root {
+  --myColor: red;
+  --myBgColor: yellow;
+  --myColor1: green;
+}
+
+.demo {
+  --myColor: rgb(46, 9, 179);
+}
+
+body {
+  background-color: var(--myBgColor);
+}
+
+p {
+  color: var(--myColor, var(--myColor1), blue);
+}
+h1 {
+  color: var(--myColor1);
+}

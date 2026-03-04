@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplu Funcțional @layer și @container cu Explicații</title>
+    <style>
+        /* =========================
+        CSS
+       ========================= */
+        @layer reset, base, components;
+
+        /* Layer reset - resetează marginile și padding-urile */
+        @layer reset {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Layer base - stiluri generale */
+        @layer base {
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                padding: 2rem;
+            }
+
+            h1 {
+                color: #333;
+            }
+        }
+
+        /* Layer components - stiluri pentru componente */
+        @layer components {
+
+            /* Container părinte */
+            .container {
+                container-type: inline-size;
+                container-name: demo;
+                /* numele containerului */
+                width: 50%;
+                /* dimensiunea containerului se poate schimba */
+                margin: 0 auto;
+                border: 2px dashed #999;
+                padding: 1rem;
+
+
+            }
+
+            .card {
+                background-color: #eee;
+                /* culoare implicită */
+                padding: 1rem;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            /* Container query: se aplică stiluri dacă .container >= 400px */
+            /* pecizam numele containerului demo */
+            @container demo (min-width: 400px) {
+                .card {
+                    background-color: #fff;
+                    /* schimbă background */
+                    border: 2px solid #333;
+                    /* adaugă border */
+                }
+
+                .card h2 {
+                    color: blue;
+                    /* titlul devine albastru */
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exemplu Funcțional @layer și @container</h1>
+
+    <!-- =========================
+       CONTAINER PĂRINTE
+       ========================= -->
+    <div class="container">
+        <div class="card">
+            <h2>Card</h2>
+            <p>Acest card își schimbă stilul în funcție de dimensiunea containerului părinte.</p>
+        </div>
+    </div>
+
+    <!-- =========================
+       EXPLICAȚII
+       ========================= -->
+    <section style="margin-top:2rem; font-family: Arial, sans-serif; line-height:1.5;">
+        <h2>Cum funcționează:</h2>
+        <p><strong>1️⃣ @layer</strong></p>
+        <ul>
+            <li>Servește pentru organizarea CSS-ului pe straturi (layers).</li>
+            <li>Straturile au o prioritate: un layer definit mai târziu poate suprascrie proprietățile layer-ului
+                definit mai devreme.</li>
+            <li>În exemplu, avem trei layer-e:
+                <ul>
+                    <li><em>reset</em> → resetează marginile și padding-urile.</li>
+                    <li><em>base</em> → definește stiluri generale pentru body și h1.</li>
+                    <li><em>components</em> → stiluri pentru componente, precum card-ul.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p><strong>2️⃣ @container</strong></p>
+        <ul>
+            <li>Este similar cu media queries, dar pe container, nu pe viewport.</li>
+            <li>Practic, verifică dimensiunea unui element părinte (<code>container-type</code>) și aplică stilurile
+                doar dacă condiția este adevărată.</li>
+            <li>În exemplu, card-ul primește un background alb și titlul albastru doar dacă containerul are
+                <code>min-width: 400px</code>.
+            </li>
+            <li>💡 Notă: Pentru ca <code>@container</code> să funcționeze complet, containerul părinte trebuie să aibă
+                <code>container-type</code> setat.
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
