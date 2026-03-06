@@ -28,7 +28,7 @@ body {
 
 /* Counter */
 .counter {
-  animation: numara 11s linear infinite reverse;
+  animation: numara 11s linear infinite alternate;
   counter-reset: count 0;
 }
 
