@@ -1,23 +1,13 @@
-:root {
-  --myColor: red;
-  --myBgcolor: yellow;
+:root{
+    --mycolor:rgb(43, 255, 0);
+}
+body{
+    --mycolor:blue;
 }
 
-body {
-  --myColor1: green;
+.block{
+    --mycolor: red;
 }
-
-.block {
-  --myColor: darkblue;
-}
-
-body {
-  background-color: var(--myBgcolor);
-}
-
-p {
-  color: var(--myColor, var(--myColor1, blue));
-}
-h1 {
-  color: var(--myColor1);
+p{
+    color: var(--mycolor);
 }
